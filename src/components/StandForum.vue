@@ -6,13 +6,16 @@
             <button id="QuestButton"><img id="ImgButton" src="@/icons/icon-pesquisar.png"></button>
         </div>
         <div id="perfilbar">
-            <img id="icon" src="https://i.pinimg.com/originals/dd/b8/e0/ddb8e0682d8c245bcf3802ec2cacfa2d.jpg">
+            <img id="icon" src="@/icons/lilian.png">
             <p id="name">Ola mundo</p>
         </div>
     </div>
 </header>
     <section class="RouterBar">
         <div id="Questcolumn">
+            <div id="RecentQuestions"> 
+                <p id="Titelrecent">Recentes</p>
+            </div>  
             <div id="DoubtsandQuestions">
                 <div id="doubt_or_question">
                     <input id="Imput_quest" type="text" placeholder="escreva sua duvida ou pergunga...">
@@ -23,9 +26,7 @@
                     <!-- criar metodos-->
                 </div>
             </div>
-            <div id="RecentQuestions"> 
-                <p id="Titelrecent">Recentes</p>
-            </div>
+
         </div>
     
     </section>
@@ -55,6 +56,7 @@ width: 77px;
 background-color: #191622;
 border: 0;
 border-radius: 4px;
+padding: 0;
 }
 #Imput_quest{
     height: 75px;    
@@ -70,7 +72,8 @@ border-radius: 4px;
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 24px;
     width: calc(100% - 77px);
 }
 #Titelrecent{
@@ -103,6 +106,8 @@ border-radius: 4px;
 }
 
 #name{
+    position: relative;
+    margin: 0;
     margin-left: 16px;
     font-family: 'Rubik';
     font-style: normal;
@@ -113,15 +118,16 @@ border-radius: 4px;
     size: 18px;
     line-height: 24px;
     color: #FFFFFF;
+    height: 100%;
 }
 #perfilbar{
+    margin-left: 1.85%;
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
 }
 #icon{
-    margin-left: 32px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -133,65 +139,58 @@ border-radius: 4px;
     justify-content: center;
     align-items: center;
 }
-.navbar{
+.navbar{   
     border-bottom: 1px solid #292730;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse; 
     justify-content: space-between;
+    align-items: center;
     width: 1728px;
-    padding: 0;
+    padding-bottom: 17px;
+    padding-top: 17px;
 }
 .Quest{
+    border: 0;
     font-family: 'Rubik';
     outline: none;
     margin: 0 auto;
-    bottom: 4px;
-    right: 16.54px;
-    margin-right: 5px;
-    position: relative;
+    margin-left: 12px;
+    padding: 0;
     background-color: #191622;
-    border: 0;
-    padding-left: 10px;
-    height: 78%;
-    width: 77%;
+    height: 100%;
+    border-radius: 4px;
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     text-transform: capitalize;  
+    width: 86.23%;
 }
 #QuestButton{
     outline: none;
-    left: -10px;
-    top: 4px;
     padding: 0;
-    margin: 0 auto;
     position: relative;
-    right: 45px;
     border: 0px;
-    height: 88%;
-    width: 12.12%;
     background: #191622;
     border-radius: 4px;
 }
 #ImgButton{
+    position: relative;
     background: #191622;
     height: 79%;
 }
 #QuestBar{
-    padding: 0;
-    margin-top: 17px;
-    margin-bottom: 17px;
-    text-align: right;
-    margin-right: 44px;
-    width: 21%;
+    margin-right: 2.55%;
     height: 50px;
-    border-radius: 4px;
     background: #191622;
     box-shadow: 0px 2px 4px rgba(255, 121, 198, 0.25);
     border-radius: 4px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 21%;
 }
 .RouterBar{
     display: flex;
@@ -201,32 +200,67 @@ border-radius: 4px;
 }
 #Questcolumn{   
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap-reverse; 
     justify-content: space-between;
     width: 1728px;
     height: 1033px;
+    margin: 0;
     box-sizing: border-box;
 }
 #RecentQuestions{
-    width: 23.55%;
+    width: calc(100% - 76.45%);
     background: #191622;
     border-left: 1px solid #292730;
 
 }
 #DoubtsandQuestions{
-   /*  width: calc(100% - 411px);  */     
-   width: 76%;
+    width: calc(100% - 23.80%)
 }
 #doubt_or_question{ 
     display: flex;
     margin-top: 18px;
-    margin-left: 32px;
+    margin-left: 33px;
     width: calc(100% - 65px) ;
     height: calc(100% - 956px);
     background: #191622;
     border-radius: 4px;
-    box-sizing: border-box;
     justify-content: space-between;
     box-sizing: border-box;
+}
+@media only screen and (min-width: 0px) and (max-width: 850px) {
+    .navbar{
+        height: 25px;
+    }
+    #perfilbar{
+        height: 25px;
+    }
+    #icon{
+        height: 25px;
+        width: 25px;
+    }
+    #QuestBar{
+        height: 25px;
+    }
+    #doubt_or_question{
+        height: 38px;
+    }
+    #Imput_quest{
+        height: 36px;
+        margin-left: 0;
+    }
+    #button_quest{  
+        height: 36px;
+        width: 36px;
+    }
+    #image_button{
+    position: relative;
+    top: 2px;
+    align-items: center;
+    height: 11.14px;
+}
+#Titel{
+    margin-top: 39px;
+}
 }
 </style>
