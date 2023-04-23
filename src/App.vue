@@ -24,7 +24,7 @@ this.load()
 </script>
 <style>
 body{
-  min-width: 375px;
+  min-width: 550px;
 }
 html, body{
   margin: 0;
