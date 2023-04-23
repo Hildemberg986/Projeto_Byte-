@@ -7,7 +7,7 @@
         </div>
         <div id="perfilbar">
             <img id="icon" src="@/icons/lilian.png">
-            <p id="name">Ola mundo</p>
+            <p id="name">lilia</p>
         </div>
     </div>
 </header>
@@ -51,12 +51,12 @@ input::placeholder {
     height: 23.83px;
 }
 #button_quest{
-height: 77px;
-width: 77px;
-background-color: #191622;
-border: 0;
-border-radius: 4px;
-padding: 0;
+    height: 77px;
+    width: 77px;
+    background-color: #191622;
+    border: 0;
+    border-radius: 4px;
+    padding: 0;
 }
 #Imput_quest{
     height: 75px;    
